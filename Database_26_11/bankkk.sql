@@ -1,0 +1,14 @@
+CREATE DATABASE PowerGridDB;
+GO
+USE PowerGridDB;
+GO
+
+CREATE TABLE GridIncidentLogs (
+    LogID INT IDENTITY(1,1) PRIMARY KEY,
+    StationName NVARCHAR(100) NOT NULL,
+    RecordedTime DATETIME NOT NULL,
+    VoltageKV FLOAT NOT NULL,
+    LoadPercent FLOAT NOT NULL,
+    AlertMessage NVARCHAR(255) NOT NULL
+);
+GO
